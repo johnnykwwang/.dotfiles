@@ -1,0 +1,45 @@
+call plug#begin('~/.vim/bundle')
+
+  " Big Stuff
+  Plug 'scrooloose/nerdtree' 
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+  " Theme
+  Plug 'morhetz/gruvbox'
+  Plug 'altercation/vim-colors-solarized'
+
+  " Editing
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
+  " Plug 'vim-scripts/tComment'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-repeat'
+  Plug 'junegunn/vim-easy-align'
+  
+  " Small Visual Help
+  Plug 'nathanaelkane/vim-indent-guides'
+
+  " Rails Related
+  Plug 'tpope/vim-bundler'
+  Plug 'tpope/vim-rails'
+
+  " Testing
+  Plug 'tpope/vim-dispatch'
+  Plug 'janko-m/vim-test'
+  Plug 'benmills/vimux'
+
+  " HTML Related
+  Plug 'mattn/emmet-vim' " Zen coding html, lots of key map to Ctrl-Y-*
+
+  " IM NOT READY FOR U
+  Plug 'vim-syntastic/syntastic'
+  " Plug 'tpope/vim-eunuch'
+
+call plug#end()
+
+
