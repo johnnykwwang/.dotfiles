@@ -1,5 +1,5 @@
 " source functions for later usage
-if filereadable(expand("~/.vimrc.functions"))
+if filereadable(expand("~/.dotfiles/.vimrc.functions"))
   source ~/.dotfiles/.vimrc.functions
 endif
 
@@ -45,6 +45,8 @@ set numberwidth=5
 set showcmd
 set ruler
 
+set breakindent
+
 " Fix god damn clipboard
 " set clipboard=unnamed
 
@@ -66,10 +68,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-
 let g:syntastic_javascript_checkers = ['standard']
 
 nnoremap <Leader>ss :SyntasticCheck<CR>
+nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <silent> <Leader>sf :%! standard --fix<CR>
 nnoremap <silent>]l :lnext<CR>
 nnoremap <silent>[l :lprevious<CR>
@@ -159,6 +161,9 @@ nmap <leader>= <Plug>AirlineSelectNextTab
 " ========
 " Syntax Highlight
 " ========
+
+" Python
+let g:SimpylFold_docstring_preview = 1
 
 " Highlight CUDA files as C++
 autocmd BufRead,BufNewFile *.cu set filetype=cpp

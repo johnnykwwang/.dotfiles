@@ -8,6 +8,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  " Plug 'kiteco/vim-plugin'
 
   " Theme
   Plug 'morhetz/gruvbox'
@@ -23,6 +24,7 @@ call plug#begin('~/.vim/bundle')
   
   " Small Visual Help
   Plug 'nathanaelkane/vim-indent-guides'
+  " Plug 'tmhedberg/SimpylFold'
 
   " Rails Related
   Plug 'tpope/vim-bundler'
