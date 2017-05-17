@@ -134,6 +134,10 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 
+
+nnoremap <Leader>tb :TagbarToggle<CR>
+let g:tagbar_width = 35
+
 " =====
 " Theme and Airline
 " =====
