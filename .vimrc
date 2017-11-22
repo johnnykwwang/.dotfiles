@@ -204,6 +204,7 @@ colorscheme gruvbox
 let g:airline_theme='cool'
 " let g:airline_symbols.linenr = ''
 set termguicolors
+set bg=dark
 set t_Co=256
 " let g:gruvbox_contrast='soft'
 
