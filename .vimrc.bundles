@@ -36,6 +36,10 @@ call plug#begin('~/.vim/bundle')
   Plug 'janko-m/vim-test'
   Plug 'benmills/vimux'
 
+  " JS
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
+
   " HTML Related
   Plug 'mattn/emmet-vim' " Zen coding html, lots of key map to Ctrl-Y-*
 

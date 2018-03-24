@@ -31,8 +31,8 @@ nnoremap <leader>rt :retab
 set hlsearch
 " highlight WHITE_ON_RED ctermfg=7  ctermbg=1
 " This rewires n and N to do the highlighing...
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
+nnoremap <silent> n   n:call HLNext(0.1)<cr>
+nnoremap <silent> N   N:call HLNext(0.1)<cr>
 
 set colorcolumn=81
 " call matchadd('colorcolumn', '\%81v', 100)
@@ -84,6 +84,9 @@ map <Leader>nf <plug>NERDTreeFind<CR>
 
 " Commentary
 map <Leader>/ gcc
+
+" Copy to clipboard in Visual
+vnoremap <silent><leader>q "+y
 
 " Source vim
 nnoremap <Leader>` :source ~/.vimrc<CR>
@@ -148,7 +151,7 @@ let g:airline_powerline_fonts=1
 " let g:airline_section_z=airline#section#create(['%3p%%:','linenr',':%3v'])
 let g:airline_section_z='%3p%% %l/%L %c'
 let g:airline#extensions#tabline#enabled=1
-
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
@@ -201,7 +204,9 @@ endif
 syntax enable
 colorscheme gruvbox
 " let g:solarized_termtrans = 1
-let g:airline_theme='cool'
+" let g:airline_theme=''
+let g:airline_theme = 'cool'
+" let g:airline_solarized_bg='dark'
 " let g:airline_symbols.linenr = ''
 set termguicolors
 set t_Co=256
