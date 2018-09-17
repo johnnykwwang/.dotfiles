@@ -8,3 +8,10 @@ function! HLNext (blinktime)
   call matchdelete(ring)
   redraw
 endfunction
+
+function! TwoSpaceTo4Space ()
+  :set ts=2 sts=2 noet
+  :retab!
+  :set ts=4 sts=4 et
+  :retab
+endfunction

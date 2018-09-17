@@ -26,6 +26,7 @@ set expandtab
 set list listchars=tab:»·,trail:·,nbsp:· " Show dots in white space when added
 nnoremap <leader>dw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nnoremap <leader>rt :retab
+nnoremap <leader>t4 :call TwoSpaceTo4Space()<CR>
 
 " Search HL
 set hlsearch
@@ -77,6 +78,12 @@ nnoremap <silent>]l :lnext<CR>
 nnoremap <silent>[l :lprevious<CR>
 nnoremap <silent>]L :llast<CR>
 nnoremap <silent>[L :lfirst<CR>
+
+
+" YouCompleteMe and UtilSnip
+let g:UltiSnipsExpandTrigger = '<C-s>'
+" let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+" let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
 " NERDTree
 map <Leader>nn <plug>NERDTreeTabsToggle<CR>
@@ -176,6 +183,15 @@ let g:SimpylFold_docstring_preview = 1
 autocmd BufRead,BufNewFile *.cu set filetype=cpp
 
 " ========
+" Emmet
+" ========
+
+" let g:user_emmet_leader_key='<C-Y>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
 
 " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
 if executable('ag')

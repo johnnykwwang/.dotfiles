@@ -9,6 +9,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'majutsushi/tagbar'
+  Plug 'Valloric/YouCompleteMe'
   " Plug 'kiteco/vim-plugin'
 
   " Theme
@@ -22,6 +23,8 @@ call plug#begin('~/.vim/bundle')
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-repeat'
   Plug 'junegunn/vim-easy-align'
+  Plug 'SirVer/ultisnips'
+  " Plug 'honza/vim-snippets'
   
   " Small Visual Help
   Plug 'nathanaelkane/vim-indent-guides'
