@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/bundle')
 
   " Big Stuff
+  Plug 'lervag/vimtex'
   Plug 'scrooloose/nerdtree' 
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'ctrlpvim/ctrlp.vim'
@@ -8,12 +9,17 @@ call plug#begin('~/.vim/bundle')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'majutsushi/tagbar'
-  Plug 'Valloric/YouCompleteMe'
+  Plug 'takac/vim-hardtime'
+  " Plug 'majutsushi/tagbar'
+  " Plug 'Valloric/YouCompleteMe'
+  Plug 'ajh17/VimCompletesMe'
   " Plug 'kiteco/vim-plugin'
 
   " Theme
-  Plug 'morhetz/gruvbox'
+  " Plug 'NLKNguyen/papercolor-theme'
+  " Plug 'flazz/vim-colorschemes'
+  " Plug 'morhetz/gruvbox'
+  Plug 'aonemd/kuroi.vim'
   Plug 'altercation/vim-colors-solarized'
 
   " Editing
@@ -28,6 +34,7 @@ call plug#begin('~/.vim/bundle')
   
   " Small Visual Help
   Plug 'nathanaelkane/vim-indent-guides'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
   " Plug 'tmhedberg/SimpylFold'
 
   " Rails Related
@@ -47,8 +54,13 @@ call plug#begin('~/.vim/bundle')
   Plug 'mattn/emmet-vim' " Zen coding html, lots of key map to Ctrl-Y-*
 
   " IM NOT READY FOR U
-  Plug 'vim-syntastic/syntastic'
+  " Plug 'vim-syntastic/syntastic'
   " Plug 'tpope/vim-eunuch'
+  
+  Plug 'tmhedberg/SimpylFold'
+  Plug 'hdima/python-syntax'
+
+  Plug 'parkr/vim-jekyll'
 
 call plug#end()
 

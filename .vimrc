@@ -1,4 +1,10 @@
+language en_US.UTF-8
+
 " source functions for later usage
+let g:ycm_path_to_python_interpreter="/usr/bin/python3"
+
+" let g:ycm_path_to_python_interpreter="/usr/bin/python"
+
 if filereadable(expand("~/.dotfiles/.vimrc.functions"))
   source ~/.dotfiles/.vimrc.functions
 endif
@@ -28,6 +34,8 @@ nnoremap <leader>dw :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 nnoremap <leader>rt :retab
 nnoremap <leader>t4 :call TwoSpaceTo4Space()<CR>
 
+command! Dos2unix :e ++ff=dos | :set ff=unix
+
 " Search HL
 set hlsearch
 " highlight WHITE_ON_RED ctermfg=7  ctermbg=1
@@ -42,6 +50,17 @@ set colorcolumn=81
 set number
 set numberwidth=5
 
+" Line Number
+:set number relativenumber
+
+" :augroup numbertoggle
+" :  autocmd!
+" :  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+" :  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+" :augroup END
+
+
+
 " Layout related options
 set showcmd
 set ruler
@@ -53,6 +72,7 @@ set breakindent
 
 " Fix NERDTree Tabs
 let g:nerdtree_tabs_synchronize_view = 0
+let NERDTreeShowLineNumbers = 0
 
 " Indent Guide Setting
 let g:indent_guides_start_level=2
@@ -65,11 +85,14 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=23
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['standard']
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 0
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_javascript_checkers = ['standard']
+
+" let g:syntastic_python_checkers = ['flake8', 'pylint']
+" let g:syntastic_python_pylint_args = '-E'
 
 nnoremap <Leader>ss :SyntasticCheck<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
@@ -99,11 +122,12 @@ vnoremap <silent><leader>q "+y
 nnoremap <Leader>` :source ~/.vimrc<CR>
 
 " Get off my lawn
+let g:hardtime_default_on = 0
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-
+nnoremap <Leader>hh :HardTimeToggle<CR>
 " Tab Management like chrome
 " Consider no more <Leader>t since vim-test need it, and we can always :tabnew
 nnoremap <Leader>y :tabnew<CR>
@@ -175,6 +199,16 @@ nmap <leader>= <Plug>AirlineSelectNextTab
 " ========
 " Syntax Highlight
 " ========
+"
+" Latex Related
+nnoremap <buffer> <C-T> :!xelatex -output-directory ./output/ -interaction nonstopmode -pdf main<CR>
+nnoremap <leader>lc :!xelatex -output-directory ./output/ -interaction nonstopmode -pdf main<CR>
+nnoremap <leader>lo :!open -a Skim output/main.pdf<CR><CR>
+
+" Markdown
+" Call everytime we open a Markdown file
+autocmd BufNewFile,BufRead,BufEnter *.markdown set syntax=liquid
+autocmd BufRead,BufNewFile,BufEnter *.md,*.markdown call MathAndLiquid()
 
 " Python
 let g:SimpylFold_docstring_preview = 1
@@ -218,10 +252,11 @@ endif
 " For solarized plugin (color scheme)
 " https://github.com/altercation/vim-colors-solarized
 syntax enable
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme kuroi
 " let g:solarized_termtrans = 1
 " let g:airline_theme=''
-let g:airline_theme = 'cool'
+let g:airline_theme = 'papercolor'
 " let g:airline_solarized_bg='dark'
 " let g:airline_symbols.linenr = ''
 set termguicolors
