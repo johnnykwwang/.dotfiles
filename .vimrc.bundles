@@ -25,6 +25,9 @@ call plug#begin('~/.vim/bundle')
   " Editing
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
+  Plug 'kana/vim-textobj-user'
+  Plug 'kana/vim-textobj-entire'
+  Plug 'michaeljsmith/vim-indent-object'
   " Plug 'vim-scripts/tComment'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tpope/vim-repeat'
